@@ -61,10 +61,41 @@ Here, we attack the CIFAR-10 and SVHN classifiers of the powerful [Mahalanobis a
 
 #### 
 
-| Dataset                    | CIFAR-10 |         | SVHN    |         |
-|----------------------------|----------|---------|---------|---------|
-| Attack                     | NATTACK  | AdvFlow | NATTACK | AdvFlow |
-| Detection Rate (AUROC (%)) | 97.95    | 66.87   | 72.85   | 64.36   |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-fymr">Dataset</th>
+    <th class="tg-c3ow" colspan="2">CIFAR-10</th>
+    <th class="tg-c3ow" colspan="2">SVHN</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-fymr">Attack</td>
+    <td class="tg-c3ow">NATTACK</td>
+    <td class="tg-c3ow">AdvFlow</td>
+    <td class="tg-c3ow">NATTACK</td>
+    <td class="tg-c3ow">AdvFlow</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Detection Rate (AUROC (%))</td>
+    <td class="tg-c3ow">97.95</td>
+    <td class="tg-7btt">66.87</td>
+    <td class="tg-c3ow">72.85</td>
+    <td class="tg-7btt">64.36</td>
+  </tr>
+</tbody>
+</table>
 
 ## Acknowledgement
 
