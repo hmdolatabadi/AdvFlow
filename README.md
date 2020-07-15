@@ -80,9 +80,9 @@ Here, we attack the CIFAR-10 and SVHN classifiers of the powerful [Mahalanobis a
   <tr>
     <td class="tg-fymr">Detection Rate (AUROC (%))</td>
     <td class="tg-c3ow">97.95</td>
-    <td class="tg-7btt">66.87</td>
+    <td class="tg-7btt">**66.87**</td>
     <td class="tg-c3ow">72.85</td>
-    <td class="tg-7btt">64.36</td>
+    <td class="tg-7btt">**64.36**</td>
   </tr>
 </tbody>
 </table>
