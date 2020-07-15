@@ -82,7 +82,7 @@ Here, we attack the CIFAR-10 and SVHN classifiers of the powerful [Mahalanobis a
     <td class="tg-c3ow">97.95</td>
     <td class="tg-7btt"><b>66.87</b></td>
     <td class="tg-c3ow">72.85</td>
-    <td class="tg-7btt">64.36</td>
+    <td class="tg-7btt"><b>64.36</b></td>
   </tr>
 </tbody>
 </table>
