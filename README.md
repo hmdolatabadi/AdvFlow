@@ -6,7 +6,7 @@ A small part of this work, the Greedy AdvFlow, has been publish in [ICML Worksho
 <p align="center">
   <img width="640" height="256" src="./images/CelebA.png">
 </p>
-<p>
+<p align="center">
     <em>image_caption</em>
 </p>
 
