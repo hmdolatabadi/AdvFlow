@@ -61,7 +61,7 @@ Here, we attack the CIFAR-10 and SVHN classifiers of the powerful [Mahalanobis a
 
 #### 
 
-| Dataset                    | CIFAR-10           | SVHN              |
+| Dataset                    | CIFAR-10 |         | SVHN    |         |
 |----------------------------|----------|---------|---------|---------|
 | Attack                     | NATTACK  | AdvFlow | NATTACK | AdvFlow |
 | Detection Rate (AUROC (%)) | 97.95    | 66.87   | 72.85   | 64.36   |
