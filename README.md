@@ -4,10 +4,10 @@ This repository is the official implementation of [_AdvFlow: Inconspicuous Black
 A small part of this work, the Greedy AdvFlow, has been publish in [ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models](https://invertibleworkshop.github.io/accepted_papers/pdfs/36.pdf).
 
 <p align="center">
-  <img width="640" height="256" src="./images/CelebA.png">
+  <img width="640" height="307" src="./images/CelebA.png">
 </p>
 <p align="center">
-    <em>image_caption</em>
+    <em>Adversarial attack on VGG19 classifier trained to detect smiles in CelebA faces.</em>
 </p>
 
 ## Requirements
@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 ## Training Normalizing Flows
 
-To train the a flow-based model, first set the `mode = 'pre_training'` in `config.py`, and then run this command:
+To train the a flow-based model, first set `mode = 'pre_training'`, and specify all relevant variables in `config.py`. Once specified, run this command:
 
 ```train
 python train.py
@@ -28,7 +28,7 @@ python train.py
 
 ## Attack Evaluation
 
-To perform _AdvFlow_ black-box adversarial attack model, first set the `mode = 'attack'` in `config.py`.
+To perform AdvFlow black-box adversarial attack, first set the `mode = 'attack'` in `config.py`.
 Also, specify the dataset, target model architecture and path by setting the `dataset`, `target_arch`, 
 and `target_weight_path` variables in `config.py`, respectively. Once specified, run:
 
@@ -42,7 +42,7 @@ for CIFAR-10, SVHN, and CelebA. For ImageNet, however, you need to run:
 python attack_imagenet.py
 ```
 
-Finally, you can run the _Greedy AdvFlow_ by:
+Finally, you can run the Greedy AdvFlow by:
 
 ```eval
 python attack_greedy.py
