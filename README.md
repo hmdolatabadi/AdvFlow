@@ -88,7 +88,7 @@ Here, we attack the CIFAR-10 and SVHN classifiers of the powerful [Mahalanobis a
 </table>
 
 Interestingly, we observe that this change in distibution can be captured in the base distribution representation of flow-based models.
-In particular, if we compute the relative change in the base distribution representation of the pre-trained normalizing flows between adversarial and clean images, we see that our approach results in adversaries that are closer to the clean image, and hence resemble the clean data distribution better.
+In particular, if we compute the relative change in the base distribution representation of the pre-trained normalizing flows between adversarial and clean images, we see that our approach results in adversaries that are closer to the clean images, and hence resemble the clean data distribution better.
 
 <p align="center">
   <img width="1200" height="400" src="./images/latent_dist.png">
@@ -109,7 +109,8 @@ If you have found our code or paper beneficial to your research, please consider
 @article{dolatabadi2020advflow,
   title={AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows},
   author={Dolatabadi, Hadi M. and Erfani, Sarah and Leckie, Christopher},
-  year={2020},
+  journal={arXiv preprint arXiv:2007},
+  year={2020}
 }
 ```
 
