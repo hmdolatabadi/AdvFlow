@@ -1,6 +1,6 @@
 # AdvFlow
 
-This repository is the official implementation of [_AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows_]().
+This repository is the official implementation of [_AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows_](https://arxiv.org/abs/2007.07435).
 A small part of this work, the Greedy AdvFlow, has been published in [ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models](https://invertibleworkshop.github.io/accepted_papers/pdfs/36.pdf).
 
 <p align="center">
@@ -109,7 +109,7 @@ If you have found our code or paper beneficial to your research, please consider
 @article{dolatabadi2020advflow,
   title={AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows},
   author={Dolatabadi, Hadi M. and Erfani, Sarah and Leckie, Christopher},
-  journal={arXiv preprint arXiv:2007},
+  journal={arXiv preprint arXiv:2007.07435},
   year={2020}
 }
 ```
