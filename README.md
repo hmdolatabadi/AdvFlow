@@ -2,7 +2,7 @@
 
 *Hadi M. Dolatabadi, Sarah Erfani, and Christopher Leckie 2020*
 
-[![arXiv](http://img.shields.io/badge/arXiv-2003.13913-B31B1B.svg)](https://arxiv.org/abs/2007.07435)
+[![arXiv](http://img.shields.io/badge/arXiv-2007.07435-B31B1B.svg)](https://arxiv.org/abs/2007.07435)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This repository is the official implementation of [_AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows_](https://arxiv.org/abs/2007.07435).
