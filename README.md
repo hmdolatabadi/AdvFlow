@@ -5,7 +5,7 @@
 [![arXiv](http://img.shields.io/badge/arXiv-2007.07435-B31B1B.svg)](https://arxiv.org/abs/2007.07435)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This repository is the official implementation of [_AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows_](https://arxiv.org/abs/2007.07435).
+This repository is the official implementation of NeurIPS 2020 paper [_AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows_](https://arxiv.org/abs/2007.07435) (Stay tuned for the camera ready version!)
 A small part of this work, the Greedy AdvFlow, has been published in [ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models](https://invertibleworkshop.github.io/accepted_papers/pdfs/36.pdf).
 
 <p align="center">
@@ -90,10 +90,10 @@ We thank the authors of these two repositories.
 
 If you have found our code or paper beneficial to your research, please consider citing them as:
 ```bash
-@article{dolatabadi2020advflow,
+@inproceedings{dolatabadi2020advflow,
   title={AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows},
-  author={Dolatabadi, Hadi M. and Erfani, Sarah and Leckie, Christopher},
-  journal={arXiv preprint arXiv:2007.07435},
+  author={Hadi Mohaghegh Dolatabadi and Sarah Erfani and Christopher Leckie},
+  booktitle = {Proceedings of the Advances in Neural Information Processing Systems 34: Annual Conference on Neural Information Processing Systems ({NeurIPS})},
   year={2020}
 }
 ```
