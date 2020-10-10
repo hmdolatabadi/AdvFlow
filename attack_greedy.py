@@ -134,7 +134,9 @@ with torch.no_grad():
 
         print(fail_list)
         success_rate = succ_imgs/float(total_imgs)
-
+        
+        # note that this is the number of steps.
+        # to get number of queries you have to multiply the vector by c.n_pop
         print('\nRun steps: ', print_list, flush=True)
         np.savez('runstep', print_list)
 
