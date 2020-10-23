@@ -64,10 +64,10 @@ with torch.no_grad():
             x    = x.cuda()
             y    = y.cuda()
             
-            # Mapping the clean image to the flow-based model latent space 
+            # Mapping the clean image to the flow-based model latent space (line 2 of Algorithm 1)
             z = model.model(x)
             
-            # Initializing the shift vector \mu
+            # Initializing the shift vector \mu (line 1 of Algorithm 1)
             mu     = 0.001 * torch.randn([1, c.output_dim]).cuda()
             
             # Getting the target classifier prediction for the current image
@@ -87,11 +87,11 @@ with torch.no_grad():
             for run_step in range(c.n_iter):
                 
                 # Generating a bunch of candidate points in the latent space based 
-                # on a normal distribution with mean \mu and variance \simga^2
+                # on a normal distribution with mean \mu and variance \simga^2 (line 4 of Algorithm 1)
                 z_sample   = torch.randn([c.n_pop, c.output_dim]).cuda()
                 modify_try = mu.repeat(c.n_pop, 1) + c.sigma * z_sample
                 
-                # Mapping the latent points back to the original image space
+                # Mapping the latent points back to the original image space (lines 5 and 6 of Algorithm 1 (f(z_k) part))
                 x_hat_s    = torch.clamp(model.model(z + modify_try, rev=True), 0., 1.)
                 
                 # Checking whether the classifier is already fooled.
@@ -140,13 +140,13 @@ with torch.no_grad():
 
                         break
                 
-                # Computing the perturbation
+                # Computing the perturbation (line 5 of Algorithm 1 (the proj. function part))
                 dist       = x_hat_s - x
                 
-                # Ensuring that the perturbation lies within the defined boundary
+                # Ensuring that the perturbation lies within the defined boundary (line 6 of Algorithm 1 (the proj. function part))
                 clip_dist  = torch.clamp(dist, -c.epsi, c.epsi)
                 
-                # Adding the correctly clipped perturbation to the original image
+                # Adding the correctly clipped perturbation to the original image (line 6 of Algorithm 1 (the proj. function part))
                 clip_input = (clip_dist + x).view(c.n_pop, c.img_dims[0], c.img_dims[1], c.img_dims[2])
                 
                 # Initializing the one hot code for the correct label
@@ -159,15 +159,15 @@ with torch.no_grad():
                 outputs    = black_box_target((clip_input - data.means)/data.stds)
                 outputs    = softmax(outputs, dim=1)
                 
-                # Computing the C&W loss for all candidate images
+                # Computing the C&W loss for all candidate images (line 6 of Algorithm 1)
                 real  = torch.log((target_onehot * outputs).sum(1) + 1e-10)
                 other = torch.log(((1. - target_onehot) * outputs - target_onehot * 10000.).max(1)[0] + 1e-10)
                 loss1 = torch.clamp(real - other, 0., 1000.)
                 
-                # Updating the shift vector \mu according to line 8 of Algorithm 1 in page 28 of the paper.
+                # Updating the shift vector \mu (lines 7, 8, and 9 of Algorithm 1)
                 Reward = - 0.5 * loss1
-                A      = (Reward - torch.mean(Reward))/(torch.std(Reward) + 1e-10)
-                mu    += (c.lr / (c.n_pop * c.sigma))*(torch.matmul(z_sample.view(c.n_pop, -1).t(), A.view(-1, 1))).view(1, -1)
+                A      = (Reward - torch.mean(Reward))/(torch.std(Reward) + 1e-10) # (line 7 of Algorithm 1)
+                mu    += (c.lr / (c.n_pop * c.sigma))*(torch.matmul(z_sample.view(c.n_pop, -1).t(), A.view(-1, 1))).view(1, -1)  # (lines 8 and 9 of Algorithm 1)
             
             # Logging
             if not success:
