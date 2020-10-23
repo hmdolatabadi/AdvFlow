@@ -103,6 +103,7 @@ if mode == 'attack':
     n_iter             = 500               # The number of iterations to query the classifier. To get the total number of queries, this number is multiplied by n_pop.
     sigma              = 0.1               # Standard deviation of the latent space Gaussian
     epsi               = 8 / 255           # Maximum pixel deviation (\ell_\inf)
+    K                  = 4                 # The number of samples over which we take the average and update \mu (for Greedy Attack)
     
     model              = 'Free_Adv_Train'  # Name of the target classifier
 
