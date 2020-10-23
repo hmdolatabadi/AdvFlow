@@ -76,7 +76,8 @@ elif c.dataset == 'ImageNet':
         dataset_class   = img.ImageNet64
         train_transform = T.Compose([T.ToTensor(),
                                      RandomHorizontalFlipTensor(),
-                                     ReshapeTransform([c.img_dims[0], c.img_dims[1], c.img_dims[2]])])
+                                     ReshapeTransform([c.img_dims[0], c.img_dims[1], c.img_dims[2]]),
+                                     add_noise])
         train_data      = dataset_class(root=root, train=True, download=False, transform=train_transform)
         train_loader    = DataLoader(train_data, batch_size=c.batch_size, shuffle=False, num_workers=c.workers,
                                   pin_memory=True,
@@ -102,7 +103,7 @@ elif c.dataset == 'svhn':
     means = 0.5
     stds  = 0.5
 
-    train_data = torchvision.datasets.SVHN(data_dir, split='train', transform=T.ToTensor(), download=True)
+    train_data = torchvision.datasets.SVHN(data_dir, split='train', transform=T.Compose([T.ToTensor(), add_noise]), download=True)
     test_data  = torchvision.datasets.SVHN(data_dir, split='test', transform=T.ToTensor(), download=True)
 
     train_loader = DataLoader(train_data, batch_size=c.batch_size, shuffle=True, num_workers=c.workers,
