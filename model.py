@@ -83,8 +83,8 @@ def init_model(mod):
         split = key.split('.')
         if param.requires_grad:
             param.data = c.init_scale * torch.randn(param.data.shape).cuda()
-            # if len(split) > 3 and split[3][-1] == '3': # last convolution in the coeff func
-            #     param.data.fill_(0.)
+            if len(split) > 3 and split[3][-1] == '3': # last convolution in the coeff func
+               param.data.fill_(0.)
 
 def save(name):
     save_dict = {'net': model.state_dict()}
