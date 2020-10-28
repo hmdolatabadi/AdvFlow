@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 This is the official implementation of NeurIPS 2020 paper [_AdvFlow: Inconspicuous Black-box Adversarial Attacks using Normalizing Flows_](https://arxiv.org/abs/2007.07435).
-A small part of this work, the Greedy AdvFlow, has been published in [ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models](https://invertibleworkshop.github.io/accepted_papers/pdfs/36.pdf). 
+A small part of this work, the Greedy AdvFlow, has been published in [ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models](https://invertibleworkshop.github.io/accepted_papers/pdfs/36.pdf). A blog post explaining our approach can be found [here](https://hmdolatabadi.github.io/posts/2020/10/advflow/).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/hmdolatabadi/hmdolatabadi.github.io/master/images/advflow/AdvFlow.gif" width="95%">
